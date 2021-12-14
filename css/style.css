@@ -1,0 +1,74 @@
+:root {
+    --col1: #41393D;
+    --col2: #3D5A6C;
+    --col3: #F6F4E0;
+    --col4: #DF572A;
+    --title-fam: 'Bodoni Moda', serif;
+    --body-fam: 'EB Garamond', serif;
+}
+
+body{
+    background-color: var(--col3);
+    font-family: var(--body-fam);
+}
+
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--col3);
+    background-color: var(--col2);
+    padding: 0 5%;
+    height: 65px;
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    font-family: var(--title-fam);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    min-width: 220px;
+    width: 30%;
+    max-width: 300px;
+}
+header a {
+    text-decoration: none;
+    color: var(--col3);
+    transition: all 0.5s ease;
+    padding: 5px 15px;
+}
+header a:hover {
+    cursor: pointer;
+    background-color: var(--col3);
+    color: var(--col2);
+    border-radius: 5px;
+}
+
+
+
+/* main */
+main {
+    margin: 0px 20px
+}
+.anchor {
+    padding-top: 65px;
+    margin-top: -65px;
+}
+main > section > h2 {
+    margin: 15px 0px 7px 0px;
+}
+
+
+
+
+#contact > div{
+    display: flex;
+}
+#contact article{
+    flex-grow: 1;
+    min-width: 100px;
+}
