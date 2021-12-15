@@ -20,10 +20,16 @@
     <header>
         <h1>kB_Designs</h1>
         <nav>
-            <a href="#about">About</a>
-            <a href="#work">Works</a>
-            <a href="#contact">Contact</a>
+            <a onclick="menu()" href="#about">About</a>
+            <a onclick="menu()" href="#works">Works</a>
+            <a onclick="menu()" href="#contact">Contact</a>
         </nav>
+        <button onclick="menu()" id="burger">
+            <div id="burg1"></div>
+            <div id="burg2"></div>
+            <div id="burg3"></div>
+            <div id="burg4"></div>
+        </button>
     </header>
     <main>
         <section id="about" class="anchor">
@@ -31,7 +37,7 @@
             <p>My Name is Kyle Bario. I come from country WA and have a Bachelor's Degree (Hnrs) majoring in Human Biology from Notre Dame and Murdoch.</p>
             <p>I have a working knowledge of computer and data science as well as design theory which I use to create amazing websites and apps that achieve all acceptance criteria in my work.</p>
         </section>
-        <section id="work" class="anchor">
+        <section id="works" class="anchor">
             <h2>Work</h2>
             <h3>Web Development</h3>
             <p>I have developed a range of webpages, from complex business websites to simple informative webpages.</p>
@@ -39,17 +45,14 @@
                 <a id="floray" class="work work_big" href="https://kbario.github.io/FlorayWines/" target="_blank">
                     <h4>Floray Wines</h4>
                     <h5>Business Website</h5>
-    
                 </a>
                 <a id="minorba" class="work work_small" href="https://kbario.github.io/MinorbaPineProducts/" target="_blank">
                     <h4>Minorba Pine Products</h4>
                     <h5>Business Website</h5>
-    
                 </a>
                 <a id="calc" class="work work_small" href="" target="_blank">
                     <h4>Calculator App</h4>
                     <h5>Web App</h5>
-    
                 </a>
                 <a id="snippet" class="work work_small" href="https://kbario.github.io/css-snippet-cheatsheat/" target="_blank">
                     <h4>CSS Cheatsheet Webpage</h4>
@@ -63,11 +66,11 @@
             <div class="work_container">
                 <a id="contentr8r" class="work work_small" href="https://kbario.github.io/concentr8r/" target="_blank">
                     <h4>concentr8r</h4>
-    
+                    <h5>R package</h5>
                 </a>
                 <a id="NMRalter8r" class="work work_small" href="https://kbario.github.io/NMRalter8r/" target="_blank">
                     <h4>NMRalter8r</h4>
-    
+                    <h5>R package</h5>
                 </a>
             </div>
         </section>

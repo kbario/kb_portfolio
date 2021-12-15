@@ -7,11 +7,15 @@
     --body-fam: 'EB Garamond', serif;
     --flex-gap: 10px;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body{
     background-color: var(--col3);
     font-family: var(--body-fam);
     color: var(--col1);
+    width: 100%;
+    overflow-x: hidden;
 }
 
 
@@ -26,7 +30,7 @@ header {
     height: 65px;
     position: sticky;
     top: 0;
-    width: 100vw;
+    width: 100%;
     font-family: var(--title-fam);
 }
 
@@ -42,14 +46,66 @@ header a {
     color: var(--col3);
     transition: all 0.5s ease;
     padding: 5px 15px;
+    border-radius: 5px;
 }
 header a:hover {
     cursor: pointer;
     background-color: var(--col3);
     color: var(--col2);
-    border-radius: 5px;
 }
 
+#burger {
+    display: none;
+    padding: 17px 15px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: var(--col2);
+    border-radius: 300px;
+    margin: 20px;
+    box-shadow: 3px 3px 10px var(--col1);
+    z-index: 5;
+}
+#burger:hover {
+    cursor: pointer;
+}
+#burger div{
+    position: relative;
+    width: 25px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: var(--col3);
+    transition: 0.5s;
+}
+#burg1{
+    top: 0px;
+}
+#burg2{
+    top: 3px;
+}
+#burg3{
+    top: -2px;
+}
+#burg4{
+    top: 1px;
+}
+
+#burg1.twist {
+    opacity: 0;
+}
+#burg2.twist {
+    transform: rotate(-45deg);
+}
+#burg3.twist {
+    transform: rotate(45deg);
+}
+#burg4.twist{
+    opacity: 0;
+}
+nav.twist{
+    transform: translateX(0%);
+    transition: 0.5s;
+}
 
 
 /* main */
@@ -74,9 +130,9 @@ main > section > h2 {
 }
 .work {
     height: 150px;
-    border: 1px solid var(--col2);
     border-radius: 4px;
     padding: 7px;
+    display: flex;
 }
 .work_big {
     flex-basis: 100%;
@@ -84,7 +140,45 @@ main > section > h2 {
 .work_small {
     flex-basis: calc(50% - calc(var(--flex-gap) / 2));
 }
-
+.work_container a {
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover; 
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-decoration: none;
+    color: var(--col1);
+    transition: all 0.5s ease;
+}
+.work_container a:hover {
+    box-shadow: 3px 3px 5px var(--col2);
+    transition: all 0.5s ease;
+    text-decoration: underline;
+}
+.work_container a h4, .work_container a h5{
+    background-color: var(--col3);
+    padding: 5px;
+    border-radius: 3px;
+}
+#floray{
+    background-image: url("../img/winery.jpeg");
+}
+#minorba {
+    background-image: url("../img/forrest.jpeg");
+}
+#calc {
+    background-image: url("../img/calc.jpeg");
+}
+#snippet {
+    background-image: url("../img/css-code.jpeg");
+}
+#NMRalter8r {
+    background-image: url("../img/nmr.jpeg");
+}
+#contentr8r {
+    background-image: url("../img/conce.jpeg");
+}
 
 #contact > div{
     display: flex;
@@ -92,4 +186,30 @@ main > section > h2 {
 #contact article{
     flex-grow: 1;
     min-width: 100px;
+}
+
+@media screen and (max-width:500px) {
+    #burger {
+        display: block;
+    }
+    nav {
+        position: fixed;
+        bottom: 100px;
+        right: 0;
+        flex-direction: column;
+        justify-content: right;
+        transform: translateX(150%);
+        transition: 0.5s;
+        min-width: 0;
+        width: auto;
+        margin-right: 20px;
+        background-color: var(--col2);
+        border: 2px solid var(--col3);
+        border-radius: 8px;
+    }
+    nav a {
+        color: var(--col3);
+        text-align: right;
+        font-size: 30px;
+    }
 }
