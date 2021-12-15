@@ -1,3 +1,5 @@
+// function that toggles class to cause menu animation
+
 function menu() {
     const ns  = [1,2,3,4]
     for (i in ns){

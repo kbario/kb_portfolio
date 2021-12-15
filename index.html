@@ -19,11 +19,15 @@
 <body>
     <header>
         <h1>kB_Designs</h1>
+
+        <!-- general navigation links -->
         <nav>
             <a onclick="menu()" href="#about">About</a>
             <a onclick="menu()" href="#works">Work</a>
             <a onclick="menu()" href="#contact">Contact</a>
         </nav>
+
+        <!-- menu button that appears on small screens -->
         <button onclick="menu()" id="burger">
             <div id="burg1"></div>
             <div id="burg2"></div>
@@ -32,6 +36,7 @@
         </button>
     </header>
     <main>
+        <!-- about section w/ avatar photo and description -->
         <div id="aboutzzz">
             <div><img src="./img/me.jpeg" alt="kyle"></div>
             <section id="about" class="anchor">
@@ -42,6 +47,7 @@
             </section>
         </div>
         
+        <!-- work showcase section. two parts: web dev and metabolomics -->
         <section id="works" class="anchor">
             <h2>Work</h2>
             <h3>Web Development</h3>
@@ -64,7 +70,7 @@
                     <h5>Informational Webpage</h5>
                 </a>
             </div>
-            
+
             <h3>Metabolomics Applications</h3>
             <p>From my honours in NMR-based Metabolomics, I have developed two R packages.</p>
             <div class="work_container">
@@ -78,6 +84,8 @@
                 </a>
             </div>
         </section>
+
+        <!-- contact section -->
         <section id="contact" class="anchor">
             <h2>Contact</h2>
             <div>
