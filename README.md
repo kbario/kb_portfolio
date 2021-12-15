@@ -17,6 +17,6 @@ Finally, a contact section with links to call or text my mobile, send me an emai
 
 ## A Link and a Look
 
-The link to my portfolio is [here](kbario.github.io/kb_portfolio/) and a screenshot of my portfolio can be seen below. 
+The link to my portfolio is [here](https://kbario.github.io/kb_portfolio/) and a screenshot of my portfolio can be seen below. 
 
 ![screenshot](./img/folio.png)
