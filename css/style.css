@@ -181,12 +181,31 @@ main > section > h2 {
     background-image: url("../img/conce.jpeg");
 }
 
+
 #contact > div{
     display: flex;
+    gap: 10px;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
-#contact article{
+#contact a {
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: var(--col2);
+    color: var(--col3);
+    padding: 7px;
     flex-grow: 1;
-    min-width: 100px;
+    text-align: center;
+    border: 2px solid var(--col3);
+    transition: 0.5s;
+}
+#contact a:hover {
+    cursor: pointer;
+    background-color: var(--col3);
+    color: var(--col2);
+    border: 2px solid var(--col1);
 }
 
 @media screen and (max-width:500px) {
@@ -204,13 +223,24 @@ main > section > h2 {
         min-width: 0;
         width: auto;
         margin-right: 20px;
-        background-color: var(--col2);
-        border: 2px solid var(--col3);
-        border-radius: 8px;
+        gap: 10px;
     }
     nav a {
         color: var(--col3);
         text-align: right;
         font-size: 30px;
+        background-color: var(--col2);
+        border: 2px solid var(--col3);
+        border-radius: 8px;
     }
+
+    #contact > div{
+        flex-wrap: wrap;
+    }
+    #contact a {
+        width: 30%;
+        max-width: 30%;
+        justify-content: left;
+    }
+    
 }
