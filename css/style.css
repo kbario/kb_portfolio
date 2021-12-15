@@ -16,6 +16,7 @@ body{
     color: var(--col1);
     width: 100%;
     overflow-x:hidden;
+    scroll-behavior: smooth;
 }
 
 
@@ -114,14 +115,30 @@ main {
     width: calc(100% - 40px);
 }
 .anchor {
-    padding-top: 65px;
+    padding-top: 75px;
     margin-top: -65px;
 }
 main > section > h2 {
     margin: 15px 0px 7px 0px;
 }
 
-
+#aboutzzz {
+    display: flex;
+    align-content: center;
+    gap: 10px;
+}
+#aboutzzz div {
+    flex: 1;
+    margin: 10px auto;
+}
+#about {
+    flex:3;
+}
+#aboutzzz img {
+    max-width: 200px;
+    width: 100%;
+    border-radius: 500px;
+}
 
 .work_container {
     display: flex;
@@ -242,5 +259,7 @@ main > section > h2 {
         max-width: 30%;
         justify-content: left;
     }
-    
+    #aboutzzz{
+        flex-direction: column-reverse;
+    }
 }
