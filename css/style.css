@@ -15,7 +15,7 @@ body{
     font-family: var(--body-fam);
     color: var(--col1);
     width: 100%;
-    overflow-x: hidden;
+    overflow-x:hidden;
 }
 
 
@@ -110,7 +110,8 @@ nav.twist{
 
 /* main */
 main {
-    margin: 0px 20px
+    margin: 0px 20px;
+    width: calc(100% - 40px);
 }
 .anchor {
     padding-top: 65px;
