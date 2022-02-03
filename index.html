@@ -4,96 +4,135 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kB_Designs</title>
+    <title>kBario</title>
 
     <!-- css -->
-    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
 
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=EB+Garamond&display=swap" rel="stylesheet">
-
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
 </head>
-<body>
-    <header>
-        <h1>kB_Designs</h1>
-
-        <!-- general navigation links -->
-        <nav>
-            <a onclick="menu()" href="#about">About</a>
-            <a onclick="menu()" href="#works">Work</a>
-            <a onclick="menu()" href="#contact">Contact</a>
-        </nav>
-
-        <!-- menu button that appears on small screens -->
-        <button onclick="menu()" id="burger">
-            <div id="burg1"></div>
-            <div id="burg2"></div>
-            <div id="burg3"></div>
-            <div id="burg4"></div>
-        </button>
-    </header>
-    <main>
-        <!-- about section w/ avatar photo and description -->
-        <div id="aboutzzz">
-            <div><img src="./img/me.jpeg" alt="kyle"></div>
-            <section id="about" class="anchor">
-                <h2>About</h2>
-                <p>My Name is Kyle Bario. I am a junior fullstack developer aiming to create elegant yet powerful websites. </p>
-                <p>I come from country WA and have a Bachelor's Degree in Human Biology from the University of Notre Dame and graduated with first class honours from Murdoch University at the end of 2021.</p>
-                <p>From this, I have a working knowledge of computer and data science which I use to create amazing websites and apps that achieve all acceptance criteria in my work.</p>
-            </section>
+<body class="bg-neutral-50 font-gara overflow-x-hidden">
+    <nav id="top-nav" class="fixed top-0 w-screen h-20 flex justify-between items-center bg-neutral-50">
+        <a href="#top-nav" id="brand" class="flex items-center justify-center">
+            <svg width="48" height="48" viewBox="0 0 12.7 12.7" version="1.1" class="fill-slate-700 ml-5">
+                <path 
+                    d="M 24 1.3222656 A 22.677165 22.677165 0 0 0 1.3222656 24 A 22.677165 22.677165 0 0 0 24 46.677734 A 22.677165 22.677165 0 0 0 46.677734 24 A 22.677165 22.677165 0 0 0 24 1.3222656 z M 12.433594 14.417969 L 12.876953 14.417969 C 12.867434 14.636912 12.863281 14.770763 12.863281 14.818359 L 12.863281 16.060547 L 12.847656 16.675781 L 12.890625 17.802734 L 12.876953 19.501953 L 12.890625 22.330078 L 12.847656 25.841797 L 12.847656 26.927734 C 12.847656 27.061004 12.853762 27.246393 12.863281 27.484375 L 13.019531 27.498047 C 13.343186 27.498047 13.670732 27.378607 14.003906 27.140625 C 15.498431 26.074467 16.437589 25.351474 16.818359 24.970703 C 17.19913 24.580413 17.388672 24.300253 17.388672 24.128906 C 17.388672 24.024194 17.326875 23.890343 17.203125 23.728516 C 16.917547 23.576207 16.598307 23.471178 16.246094 23.414062 C 16.141382 23.395024 16.028047 23.372308 15.904297 23.34375 C 15.73295 23.296154 15.588841 23.263179 15.474609 23.244141 L 15.447266 23.099609 C 15.447266 23.032975 15.469982 22.938204 15.517578 22.814453 C 17.021622 22.757338 18.331558 22.728516 19.445312 22.728516 C 20.073584 22.728516 20.745039 22.742927 21.458984 22.771484 L 21.458984 22.957031 C 21.458984 23.023666 21.434315 23.110132 21.386719 23.214844 C 21.24393 23.243402 21.021413 23.286634 20.716797 23.34375 C 20.126602 23.438943 19.677663 23.570841 19.373047 23.742188 C 18.640063 24.132477 17.884095 24.68034 17.103516 25.384766 C 16.637072 25.803613 16.231365 26.155828 15.888672 26.441406 L 15.375 26.884766 C 15.413077 26.9514 15.474873 27.03176 15.560547 27.126953 C 15.598624 27.16503 15.674831 27.251496 15.789062 27.384766 C 15.903294 27.518035 16.1092 27.740552 16.404297 28.054688 C 17.432378 29.139884 18.192498 29.978165 18.6875 30.568359 C 18.849328 30.758745 19.030564 30.968803 19.230469 31.197266 C 19.972972 32.025442 20.405546 32.486839 20.529297 32.582031 C 20.795836 32.753378 21.191284 32.885276 21.714844 32.980469 C 21.962345 33.028065 22.176556 33.071298 22.357422 33.109375 C 22.395499 33.223606 22.416016 33.314225 22.416016 33.380859 L 22.400391 33.523438 C 21.724523 33.466322 21.238457 33.4375 20.943359 33.4375 L 20.6875 33.4375 L 16.716797 33.552734 C 16.564489 33.571773 16.461412 33.582031 16.404297 33.582031 C 16.309104 33.582031 16.208228 33.561515 16.103516 33.523438 C 16.074958 33.447283 16.060547 33.381334 16.060547 33.324219 L 16.060547 33.224609 C 16.117662 33.138936 16.171154 33.085445 16.21875 33.066406 C 17.161157 32.990252 17.707067 32.928456 17.859375 32.880859 C 17.945048 32.861821 18.027361 32.810283 18.103516 32.724609 C 18.103516 32.562782 17.965512 32.301185 17.689453 31.939453 C 17.413394 31.577721 16.723376 30.782673 15.619141 29.554688 C 14.914715 28.774108 14.457471 28.321016 14.248047 28.197266 C 14.048142 28.063996 13.766029 27.998047 13.404297 27.998047 L 12.863281 27.998047 C 12.825204 28.34074 12.804688 29.12553 12.804688 30.353516 C 12.804688 31.495828 12.901412 32.229079 13.091797 32.552734 C 13.196509 32.7336 13.443694 32.848888 13.833984 32.896484 C 14.224274 32.944081 14.475613 33.014182 14.589844 33.109375 C 14.665998 33.166491 14.713383 33.300342 14.732422 33.509766 C 14.161266 33.500246 13.681306 33.496094 13.291016 33.496094 C 12.662744 33.496094 11.976878 33.510505 11.234375 33.539062 C 10.786969 33.558101 10.434755 33.566406 10.177734 33.566406 C 9.987349 33.566406 9.6742144 33.562254 9.2363281 33.552734 L 9.2070312 33.138672 C 9.2831854 33.081556 9.3552401 33.048582 9.421875 33.039062 C 9.4885099 33.020024 9.7254372 32.995355 10.134766 32.966797 C 10.553613 32.938239 10.81521 32.847621 10.919922 32.695312 C 11.024634 32.533485 11.078125 31.882546 11.078125 30.740234 L 11.105469 25.099609 L 11.078125 24.099609 C 11.078125 24.013936 11.08643 23.694696 11.105469 23.142578 C 11.124507 22.885558 11.134766 22.576576 11.134766 22.214844 L 11.078125 19.730469 L 11.091797 17.560547 C 11.091797 17.036987 11.01559 16.703336 10.863281 16.560547 C 10.720492 16.408239 10.201452 16.270235 9.3066406 16.146484 L 9.3066406 15.974609 C 9.3066406 15.917494 9.3127464 15.837134 9.3222656 15.732422 C 9.8648638 15.618191 10.344824 15.476034 10.763672 15.304688 C 10.982615 15.209495 11.538783 14.912971 12.433594 14.417969 z M 30.640625 15.019531 C 32.2589 15.019531 33.44329 15.137018 34.195312 15.375 C 35.290028 15.727213 36.10364 16.260664 36.636719 16.974609 C 37.179317 17.679035 37.451172 18.463825 37.451172 19.330078 C 37.451172 20.73893 36.446065 21.925273 34.4375 22.886719 L 34.367188 23 C 35.395268 23.276059 36.237702 23.661248 36.894531 24.15625 C 37.551361 24.651252 38.05599 25.256758 38.408203 25.970703 C 38.665223 26.494263 38.792969 27.180129 38.792969 28.027344 C 38.792969 29.445714 38.146183 30.710465 36.851562 31.824219 C 35.566462 32.928454 33.790976 33.480469 31.525391 33.480469 L 29.396484 33.480469 L 27.242188 33.552734 C 25.338334 33.571773 24.224046 33.582031 23.900391 33.582031 C 23.567216 33.582031 23.237718 33.56762 22.914062 33.539062 L 22.914062 33.380859 C 22.914063 33.266628 22.938732 33.186268 22.986328 33.138672 C 23.043444 33.081556 23.152626 33.034171 23.314453 32.996094 C 24.504361 32.748593 25.175817 32.581767 25.328125 32.496094 C 25.489953 32.400901 25.599134 32.252639 25.65625 32.052734 C 25.770481 31.671964 25.828125 30.691526 25.828125 29.111328 C 25.828125 28.968539 25.822019 28.787303 25.8125 28.568359 C 25.793461 27.930569 25.785156 27.565896 25.785156 27.470703 L 25.785156 25.984375 C 25.785156 23.471289 25.756334 21.277639 25.699219 19.402344 L 25.685547 16.53125 L 25.669922 16.175781 C 24.860784 16.06155 24.148049 15.989495 23.529297 15.960938 C 23.129488 15.951418 22.806095 15.918444 22.558594 15.861328 L 22.558594 15.417969 C 22.720421 15.379892 22.848167 15.357176 22.943359 15.347656 L 24.285156 15.275391 C 25.39891 15.180198 26.64705 15.103991 28.027344 15.046875 C 28.579461 15.027836 29.450717 15.019531 30.640625 15.019531 z M 30.369141 15.675781 C 29.560003 15.675781 28.808188 15.7664 28.113281 15.947266 C 28.103762 16.14717 28.097656 16.293479 28.097656 16.388672 C 28.097656 16.483865 28.107915 16.755719 28.126953 17.203125 C 28.136472 17.488703 28.140625 17.774969 28.140625 18.060547 L 28.097656 19.787109 L 28.113281 20.816406 L 28.212891 22.830078 L 28.226562 23.085938 C 28.702526 23.18113 29.203003 23.228516 29.726562 23.228516 C 31.782724 23.228516 33.177173 22.777377 33.910156 21.873047 C 34.64314 20.968717 35.009766 20.068639 35.009766 19.173828 C 35.009766 18.774019 34.941863 18.370266 34.808594 17.960938 C 34.684843 17.54209 34.456221 17.165206 34.123047 16.832031 C 33.799392 16.498857 33.395639 16.251671 32.910156 16.089844 C 32.08198 15.813785 31.235394 15.675781 30.369141 15.675781 z M 31.111328 23.914062 C 29.378822 23.914062 28.406689 23.947037 28.197266 24.013672 C 28.187746 24.232615 28.183594 24.395288 28.183594 24.5 L 28.197266 25.027344 L 28.183594 26.099609 L 28.183594 27.3125 C 28.212152 29.549528 28.26369 30.873875 28.339844 31.283203 C 28.415998 31.692532 28.673442 32.044746 29.111328 32.339844 C 29.558734 32.634941 30.382604 32.785403 31.582031 32.794922 C 32.524439 32.728287 33.315334 32.528487 33.953125 32.195312 C 34.248222 32.043004 34.594331 31.773102 34.994141 31.382812 C 35.403469 30.983003 35.718557 30.507196 35.9375 29.955078 C 36.165962 29.402961 36.279297 28.869509 36.279297 28.355469 C 36.279297 27.965179 36.198937 27.483265 36.037109 26.912109 C 35.884801 26.340953 35.619052 25.842429 35.238281 25.414062 C 34.86703 24.976176 34.308909 24.617856 33.566406 24.341797 C 32.823903 24.056219 32.006139 23.914063 31.111328 23.914062 z "
+                    transform="scale(0.26458333)" />
+            </svg>
+        </a>
+        <div id="navlinks" class="hidden sm:flex mr-5 max-w-sm justify-between w-1/3">
+            <a href="">About</a>
+            <a href="">Work</a>
+            <a href="">Contact</a>
         </div>
-        
-        <!-- work showcase section. two parts: web dev and metabolomics -->
-        <section id="works" class="anchor">
-            <h2>Work</h2>
-            <h3>Web Development</h3>
-            <p>I have developed a range of webpages, from complex business websites to simple informative webpages.</p>
-            <div class="work_container">
-                <a id="floray" class="work work_big" href="https://kbario.github.io/FlorayWines/" target="_blank">
-                    <h4>Floray Wines</h4>
-                    <h5>Business Website</h5>
-                </a>
-                <a id="minorba" class="work work_small" href="https://kbario.github.io/MinorbaPineProducts/" target="_blank">
-                    <h4>Minorba Pine Products</h4>
-                    <h5>Business Website</h5>
-                </a>
-                <a id="calc" class="work work_small" href="" target="_blank">
-                    <h4>Calculator App</h4>
-                    <h5>Web App</h5>
-                </a>
-                <a id="snippet" class="work work_small" href="https://kbario.github.io/css-snippet-cheatsheat/" target="_blank">
-                    <h4>CSS Cheatsheet Webpage</h4>
-                    <h5>Informational Webpage</h5>
-                </a>
-            </div>
-
-            <h3>Metabolomics Applications</h3>
-            <p>From my honours in NMR-based Metabolomics, I have developed two R packages.</p>
-            <div class="work_container">
-                <a id="contentr8r" class="work work_small" href="https://kbario.github.io/concentr8r/" target="_blank">
-                    <h4>concentr8r</h4>
-                    <h5>R package</h5>
-                </a>
-                <a id="NMRalter8r" class="work work_small" href="https://kbario.github.io/NMRalter8r/" target="_blank">
-                    <h4>NMRalter8r</h4>
-                    <h5>R package</h5>
-                </a>
-            </div>
+        <div id="burger" class="flex flex-col gap-1 cursor-pointer sm:hidden mr-6">
+            <div class="w-6 h-1 bg-neutral-500 transition-all duration-300"></div>
+            <div class="w-6 h-1 bg-neutral-500 transition-all duration-300"></div>
+            <div class="w-6 h-1 bg-neutral-500 transition-all duration-300"></div>
+        </div>
+    </nav>
+    <section id="phone-links" class="fixed sm:hidden bottom-0 w-screen h-20 bg-neutral-800 text-white flex">
+        <div class="w-1/3 flex flex-col justify-center items-center">
+            <div class="flex gap-2"><i class="fas fa-phone-alt"></i><i class="fas fas fa-envelope"></i></div>
+            <h1>Contact</h1>
+        </div>
+        <div class="w-1/3 border-x border-gray-50 flex justify-center flex-col items-center">
+            <div class="flex gap-2"><i class="fab fa-github"></i><i class="fab fab fa-linkedin-in"></i></div>
+            <h1>Social</h1>
+        </div>
+        <div class="w-1/3 flex justify-center flex-col items-center">
+            <div><i class="fas fa-file-download"></i></div>
+            <h1>Resume</h1>
+        </div>
+    </section>
+    <section id="modals">
+        <div class="w-screen h-screen fixed hidden z-50"></div>
+        <div class="w-screen h-screen fixed hidden z-50"></div>
+        <div class="w-screen h-screen fixed hidden z-50"></div>
+    </section>
+    <main class="max-w-4xl mx-auto">
+        <section id="hero" class="mx-5 mt-20 mb-5 h-leftover-phone sm:h-leftover flex flex-col justify-center bg-opacity-70">
+            <h1 class="text-2xl">Kyle Bario</h1>
+            <p>I am a beast and you should hire me</p>
         </section>
-
-        <!-- contact section -->
-        <section id="contact" class="anchor">
-            <h2>Contact</h2>
-            <div>
-                    <a href="tel:+61408039822">Call</a>
-                    <a href="sms:+61408039822">Text</a>
-                    <a href="mailto: kylebario1@gmail.com">Email</a>
-                    <a href="https://github.com/kbario?tab=repositories" target="_blank">Github</a>
-                    <a href="https://twitter.com/k_bario" target="_blank">Twitter</a>
+        <section id="tools" class="flex w-full flex-wrap gap-4 p-4 justify-center items-center bg-neutral-200">
+                <div class="card">
+                    <i class="fab fa-html5 fa-3x"></i>
+                </div>
+                <div class="card">
+                    <i class="fab fa-css3 fa-3x"></i>
+                </div>
+                <div class="card">
+                    <i class="fab fa-js fa-3x"></i>
+                </div>
+                <div class="card">
+                    <i class="fab fa-node-js fa-3x"></i>
+                </div>
+                <div class="card">
+                    <i class="fab fa-npm fa-3x"></i>
+                </div>
+                <div class="card">
+                    <i class="fab fa-font-awesome fa-3x"></i>
+                </div>
+                <div class="card">
+                    <i class="fab fa-bootstrap fa-3x"></i>
+                </div>
+                <div class="card">
+                    <i class="fab fa-github fa-3x"></i>
+                </div>
+                <div class="card">
+                    <i class="fab fa-gitlab fa-3x"></i>
+                </div>
+                <div class="card">
+                    <i class="fab fa-slack fa-3x"></i>
+                </div>                               
+        </section>
+        <section id="work" class="mb-20">
+            <h1 class="text-center mt-5 text-4xl">My Work</h1>
+            <div id="project-1" class="m-4 rounded border border-zinc-400 flex w-auto">
+                <div class="m-3 w-3/4">
+                    <h1 class="text-2xl">Get Cultured</h1>
+                    <a class="my-3 px-2 py-1 bg-red-600 rounded text-white" href="https://danielnels.github.io/Project-1-Get-Cultured/">Web page</a>
+                    <a class="my-3 ml-2 px-2 py-1 bg-red-600 rounded text-white" href="https://github.com/danielnels/Project-1-Get-Cultured"><i class="fab fa-github"></i> Repo</a>
+                    <p>A web app that gets artworks related to a search term from the Metropolitan Museum of Art API, and displays them with info about their artist, culture, period and medium. Local storage is also used to maintain a list of historical searches.</p>
+                </div>
+                <div class="w-1/4 rounded">
+                    <img class="object-cover object-top w-full h-full" src="./img/gc.png" alt="">
+                </div>
+            </div>
+            <div id="project-2" class="m-4 rounded border border-zinc-400 flex">
+                <div class="m-3 w-3/4">
+                    <h1 class="text-2xl">Weather Dashboard</h1>
+                    <a class="my-3 px-2 py-1 bg-red-600 rounded text-white" href="https://kbario.github.io/WheresMyWeather/">Web page</a>
+                    <a class="my-3 ml-2 px-2 py-1 bg-red-600 rounded text-white" href="https://github.com/kbario/WheresMyWeather"><i class="fab fa-github"></i> Repo</a>
+                    <p>Using the Open Weather Map API, information on the current weather (temp, windspeed, humidity and UVI) and 5-day forecast is displayed for any real city searched for. Search history is retained in local storage.</p>
+                </div>
+                <div class="w-1/4 rounded">
+                    <img class="object-cover object-top w-full h-full" src="./img/wd.png" alt="">
+                </div>
+            </div>
+            <div id="project-3" class="m-4 rounded border border-zinc-400 flex">
+                <div class="m-3 w-3/4">
+                    <h1 class="text-2xl">Coding Quiz</h1>
+                    <a class="my-3 px-2 py-1 bg-red-600 rounded text-white" href="https://kbario.github.io/CodingGetGood/">Web page</a>
+                    <a class="my-3 ml-2 px-2 py-1 bg-red-600 rounded text-white" href="https://github.com/kbario/CodingGetGood"><i class="fab fa-github"></i> Repo</a>
+                    <p>A one minute quiz that deducts time for wrong answers, gives feedback on the correctness of answers, ends the game on time-up, save highscores in local storage, and is mobile responsive.</p>
+                </div>
+                <div class="w-1/4 rounded">
+                    <img class="object-cover object-top w-full h-full" src="./img/cq.png" alt="">
+                </div>
+            </div>
+            <div id="project-4" class="m-4 rounded border border-zinc-400 flex">
+                <div class="m-3 w-3/4">
+                    <h1 class="text-2xl">Floray Wines</h1>
+                    <a class="my-3 px-2 py-1 bg-red-600 rounded text-white" href="https://kbario.github.io/FlorayWines/">Web page</a>
+                    <a class="my-3 ml-2 px-2 py-1 bg-red-600 rounded text-white" href="https://github.com/kbario/FlorayWines"><i class="fab fa-github"></i> Repo</a>
+                    <p>A website for a boutique winery, boasting multiple pages rendered with JavaScript, a responsive mobile-first design, and a beautify UI.</p>
+                </div>
+                <div class="w-1/4 rounded">
+                    <img class="object-cover object-top w-full h-full" src="./img/fw.png" alt="">
+                </div>
             </div>
         </section>
     </main>

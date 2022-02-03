@@ -1,9 +1,16 @@
-// function that toggles class to cause menu animation
+const burger = document.getElementById('burger');
+// const navlinks = document.getElementById('navlinks')
 
-function menu() {
-    const ns  = [1,2,3,4]
-    for (i in ns){
-        document.getElementById(`burg${ns[i]}`).classList.toggle('twist')
-    }
-    document.querySelector("nav").classList.toggle('twist')
-}
+burger.addEventListener('click',() => {
+    // remove the center div
+    burger.children[1].classList.toggle('opacity-0');
+    // remove translate and rotate the top div
+    burger.children[0].classList.toggle('-rotate-45');
+    burger.children[0].classList.toggle('translate-y-2');
+    // remove translate and rotate the bottom div
+    burger.children[2].classList.toggle('rotate-45');
+    burger.children[2].classList.toggle('-translate-y-2');
+
+    // bring navlinks into view of screen
+    // navlinks.classList.toggle('translate-x-full')
+});
