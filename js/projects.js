@@ -26,7 +26,7 @@ const projects = [
         id: 'CodingQuiz',
         website: 'https://kbario.github.io/CodingGetGood/',
         repo: 'https://github.com/kbario/CodingGetGood',
-        description: 'A one minute quiz that deducts time for wrong answers, gives feedback on the correctness of answers, ends the game on time-up, save highscores in local storage, and is mobile responsive.',
+        description: 'A one-minute quiz that deducts time for wrong answers, gives feedback on the correctness of answers, ends the game on time-up, save highscores in local storage, and is mobile responsive.',
         tags: {
             normal:'Single Page Game',
             con: '#SinglePageGame',
