@@ -87,11 +87,11 @@ function myWorkCTARender() {
     cta.setAttribute('class', 'flex pb-5')
     cta.innerHTML = `<div class="flex w-1/2 flex-col items-center gap-2">
                         <h3 class='text-xl'>Are You Sold?</h3>
-                        <a href="#contact" class='text-xl rounded bg-orange-600 text-white px-3 py-1'>Get In Touch</a>
+                        <a href="#contact" class='btn tran'>Get In Touch</a>
                     </div>
                     <div class="flex w-1/2 flex-col items-center gap-2">
                         <h3 class='text-xl'>Want to See More?</h3>
-                        <a href='https://github.com/kbario' target="_blank" class="text-xl rounded bg-orange-600 text-white px-3 py-1">Github</a>
+                        <a href='https://github.com/kbario' target="_blank" class="btn tran">Github</a>
                     </div>`
     workContainer.appendChild(cta)
 }
